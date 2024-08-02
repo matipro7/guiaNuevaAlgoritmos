@@ -6,7 +6,7 @@ public class act53 {
 
 	static int notaMay, notaMen;
 	static int numMayor = 0;
-	static int numMenor = 0;
+	static int numMenor = 10000;
 	static int suma = 0;
 	static Scanner scanner = new Scanner(System.in);
 	
@@ -19,28 +19,24 @@ public class act53 {
 			
 			System.out.println("profesor ingrese la calificacion: ");
 			nota = scanner.nextInt();
-			numMayor = 0;
-			numMenor = 0;
-			if (i== 0) {
+			
+			
+			if ( nota > numMayor ) {
+				
 				numMayor = nota;
-				numMenor = nota;
 			}
-			else if (nota>numMayor) {
-				
-				numMayor = nota;
-				
-				}
-			if (nota<numMenor) {
-				numMenor = nota;
-					}
-			suma= suma+ nota;;
+				else if (nota<numMenor) {
+					numMenor = nota;
+					
+			}
+			suma = nota + suma;
 		}
 	}
 	
 	public static void mayorMenor() {
 		
 		System.out.println("El numero mayor es: "+numMayor);
-		System.out.println("El numero mayor es: "+numMenor);
+		System.out.println("El numero menor es: "+numMenor);
 	}
 		
 		public static void promedio () {
